@@ -12,7 +12,6 @@
 	&__logo
 		font-size: 30px
 		flex-shrink: 0
-		z-index: 3
 	// .header__nav
 	&__nav
 		transition: $transition
@@ -23,11 +22,13 @@
 			bottom: 0
 			top: 0
 			width: 60%
-			max-width: 260px
+			max-width: 360px
 			z-index: 3
 			background-color: #0d2470
 			&.active
 				transform: translateX(0%)
+		@media screen and ( max-width: 479.98px )
+			max-width: 260px
 
 	// .header__menu
 	&__menu
@@ -65,6 +66,7 @@
 			@media screen and ( max-width: 991.98px )
 				display: block
 				text-align: center
+
 	// .header__buttons
 	&__buttons
 		display: flex
@@ -74,17 +76,19 @@
 		gap: 15px
 		transition: $transition
 		@media screen and ( max-width: 991.98px )
-			margin-right: auto
+			margin-right: 50px
+			z-index: 3
 		@media screen and ( max-width: 767.98px )
 			position: fixed
 			flex-direction: column
 			right: 0
 			bottom: 0
 			width: 60%
-			max-width: 260px
+			max-width: 360px
 			z-index: 3
 			gap: 5px
 			transform: translateX(200%)
+			margin-right: 0
 			padding-top: 5px
 			padding-bottom: 5px
 			background-color: #0d2470
@@ -93,17 +97,11 @@
 				padding: 0.5em 1em
 			&.active
 				transform: translateX(0%)
+		@media screen and ( max-width: 479.98px )
+			max-width: 260px
 
 	// .header__btn
 	&__btn
-		border: none
-		outline: none
-		font-size: 18px
-		padding: 0.33em 1em
-		border-radius: 0.5em
-		background-color: #4e0f77
-		color: $color-white
-		cursor: pointer
 
 	// .header__burger
 	&__burger
